@@ -10,7 +10,7 @@ SELECT "id", "manufacturer", "rating" FROM chocolate ORDER BY "rating" desc LIMI
 ALTER TABLE chocolate ADD COLUMN description text;
 -- 5. set the value of that new column as 'data from kaggle'
 UPDATE chocolate SET description = 'data from Kaggle';
--- 6. show only the unique (non duplicates) of the rating column
+-- 6. show only the unique (non duplicates) of the rating column 
 SELECT DISTINCT rating FROM chocolate;
 -- 7. group rows together by the rating column and use an aggregate function to calculate the count
 SELECT rating, COUNT(*) AS rating_counts FROM chocolate GROUP BY rating;
